@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Fact = () => ({fact}) => {
+const Fact = ({fact}) => {
     const {text, upvotes} = fact;
     return (
         <div>
