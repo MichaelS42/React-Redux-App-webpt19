@@ -5,7 +5,8 @@ import FETCH_FAIL from '../actions';
 const initialState = {
     isLoading: false,
     err: null,
-    facts: []
+    facts: [],
+    update: Date.now()
 }
 
 const Reducer = () => (state = initialState, action) => {
@@ -19,7 +20,8 @@ const Reducer = () => (state = initialState, action) => {
                 return {
                     err: null,
                     facts: action.payload,
-                    isLoading: false
+                    isLoading: false,
+                    update: Date.now()
                 };
                 case FETCH_FAIL:   
                     return {

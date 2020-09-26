@@ -9,6 +9,7 @@ const fetch = () => (dispatch) => {
   axios
     .get("https://cat-fact.herokuapp.com/facts")
     .then((res) => {
+      console.log("get: res ", res)
       dispatch({
         type: FETCH_SUCCESS,
         payload: res.data.all,

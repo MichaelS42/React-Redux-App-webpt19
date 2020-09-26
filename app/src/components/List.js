@@ -5,10 +5,11 @@ import Fact from './Fact';
 
 const List = () => {
     const facts = useSelector(state => state.facts);
+    console.log(facts)
 
     return (
         <div>
-            {facts.map(fact => <Fact key={fact._id} fact={fact} />)}
+            {facts?.map(fact => <Fact key={fact._id} fact={fact} />)}
         </div>
     )
 }
